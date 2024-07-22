@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Google Maps Navigation Test</title>
+  <script>
+    function navigate() {
+      var start = "Your location"; // Replace with your start address or coordinates if needed
+      var destination = "KSIT, 14, Kanakapura Rd, Raghuvanahalli, Bangalore City Municipal Corporation Layout, Bengaluru, Karnataka 560109"; // Replace with your destination address or coordinates
+
+      var mapsUrl = "https://www.google.com/maps/dir/?api=1";
+      mapsUrl += "&origin=" + encodeURIComponent(start);
+      mapsUrl += "&destination=" + encodeURIComponent(destination);
+      mapsUrl += "&travelmode=walking"; // Specify the travel mode as walking
+
+      // Open the URL in a new tab
+      window.open(mapsUrl, '_blank');
+    }
+  </script>
+</head>
+<body>
+  <h1>Google Maps Navigation Test</h1>
+  <button onclick="navigate()">Navigate to KSIT, Bangalore</button>
+</body>
+</html>
